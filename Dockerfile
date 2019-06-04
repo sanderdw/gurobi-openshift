@@ -20,7 +20,7 @@ LABEL io.k8s.description="Gurpbo optimization Platform" \
 
 # TODO (optional): Copy the builder files into /opt/app-root
 # COPY ./<builder_folder>/ /opt/app-root/
-ADD https://sanwil.net/Downloads/Gurobi/gurobi8.1.1_linux64.tar.gz /opt
+ADD http://packages.gurobi.com/8.1/gurobi8.1.1_linux64.tar.gz /opt
 RUN tar xvfz /opt/gurobi8.1.1_linux64.tar.gz
 RUN export GUROBI_HOME="/opt/gurobi810/linux64" 
 RUN export PATH="${PATH}:${GUROBI_HOME}/bin" 
